@@ -13,12 +13,10 @@ jobs:
       run: dotnet test
     - name: Use Node.js
       uses: actions/setup-node@v2
-    - name: build
+    - name: build & test
       run: | 
         cd DotnetTemplate.Web
         npm install
         npm run build
-    - name: test
-      run: | 
-        cd DotnetTemplate.Web
         npm t
+        npm run lint
