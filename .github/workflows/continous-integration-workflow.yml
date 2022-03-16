@@ -15,9 +15,9 @@ jobs:
       uses: actions/setup-node@v2
     - name: build
       run: | 
-      cd DotnetTemplate.Web
-      npm run build
+        cd DotnetTemplate.Web
+        npm run build
     - name: test
       run: | 
-      cd DotnetTemplate.Web
-      npm test
+        cd DotnetTemplate.Web
+        npm test
