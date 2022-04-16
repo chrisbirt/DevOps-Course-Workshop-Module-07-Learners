@@ -3,16 +3,15 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
+		steps {
+			bat "dotnet build"
+		}		
         stage('Test') {
             steps {
                 echo 'Testing..'
             }
         }
-        stage('Deployment') {
+        stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
